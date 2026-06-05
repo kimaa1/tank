@@ -1,21 +1,71 @@
 # 🎮 坦克大战 (Tank Battle)
 
-经典 FC 坦克大战的 HTML5 网页版复刻。使用纯 HTML + CSS + JavaScript + Canvas 实现，无需任何依赖。
+经典 FC 坦克大战复刻 — 提供 **网页版** 和 **Python 版** 两种实现。
 
-## 🕹️ 游戏玩法
+## 📂 项目结构
 
-- 控制你的坦克在战场上移动，消灭所有敌方坦克
-- **保护你的基地** — 基地位于地图底部中央，一旦被摧毁游戏立即结束
-- 每关有 10 辆敌方坦克，全部消灭即可过关
-- 收集道具获得增益效果
+```
+tank-battle/
+├── index.html          # 网页版（浏览器直接打开即玩）
+├── tank_battle.py      # Python 版（Pygame 实现）
+├── requirements.txt    # Python 依赖
+└── README.md
+```
 
-## 🎯 操作方式
+---
+
+## 🌐 网页版 — 快速开始
+
+**无需安装任何东西！** 直接用浏览器打开 `index.html` 即可开始游戏。
+
+或访问 GitHub Pages：`https://kimaa1.github.io/tank/`
+
+---
+
+## 🐍 Python 版 — 安装和运行
+
+### 1. 安装 Python
+
+确保安装了 **Python 3.11 ~ 3.13**（pygame 目前不支持 Python 3.14）。
+
+下载地址：https://www.python.org/downloads/
+
+### 2. 安装依赖
+
+打开终端（CMD 或 PowerShell），运行：
+
+```bash
+pip install pygame
+```
+
+> ⚠️ 如果你用的是 **Python 3.14**，pygame 暂时没有预编译包。建议安装 Python 3.12 或 3.13。
+
+### 3. 运行游戏
+
+```bash
+cd tank-battle
+python tank_battle.py
+```
+
+### 4. 游戏操作
 
 | 按键 | 功能 |
 |------|------|
 | `↑ ↓ ← →` / `W A S D` | 移动坦克 |
 | `空格` / `J` | 发射子弹 |
 | `P` | 暂停 / 继续 |
+| `R` | 游戏结束后重新开始 |
+| `Q` | 游戏结束后退出 |
+| 关闭窗口 | 退出游戏 |
+
+---
+
+## 🎯 游戏玩法
+
+- 控制你的坦克在战场上移动，消灭所有敌方坦克
+- **保护你的基地** — 基地位于地图底部中央，一旦被摧毁游戏立即结束
+- 每关有 10 辆敌方坦克，全部消灭即可过关
+- 收集道具获得增益效果
 
 ## 🧱 地图元素
 
@@ -37,23 +87,14 @@
 | 💣 炸弹 | 消灭场上所有敌人 |
 | ❤️ 生命 | 增加一条命 |
 
-## 🚀 快速开始
-
-1. 克隆仓库：
-   ```bash
-   git clone https://github.com/kimaa1/tank.git
-   ```
-2. 用浏览器打开 `index.html`
-3. 点击 "开始游戏" 开始战斗！
-
-或者直接访问 GitHub Pages：`https://kimaa1.github.io/tank/`
-
 ## 🛠️ 技术栈
 
-- HTML5 Canvas
-- 纯 JavaScript (ES6+)
-- Web Audio API (简易音效)
-- 完全不依赖任何第三方库
+| 网页版 | Python 版 |
+|--------|-----------|
+| HTML5 Canvas | Pygame |
+| 纯 JavaScript (ES6+) | Python 3 |
+| Web Audio API | Pygame Mixer |
+| 零依赖 | 仅需 pygame |
 
 ## 📝 游戏特色
 
